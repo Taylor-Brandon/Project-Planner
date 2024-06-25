@@ -1,5 +1,5 @@
 var forms = $('.form'); 
-var button = $('.btn.btn-primary'); 
+var button = $('.btn'); 
 var projectInput = $('input[name=project-input]'); 
 var projectItems = $('.projectItem'); 
 
@@ -71,7 +71,7 @@ var targetTimes = [
     }
 ];
 
-var date = dayjs().format('MMM D, YYYY'); //this creates a variable for the date 
+var date = dayjs().format('MMM D, YYYY'); 
 $('#date').text(date);
 
 function currentTime() {
@@ -86,12 +86,15 @@ function checkTime(currentTime) {
     for (var i = 0; i < targetTimes.length; i++) {
         var hours = targetTimes[i].dayJs.diff(currentTime, 'hour');
         $('#id_' + targetTimes[i].id).text(targetTimes[i].realTime);
-        if (hours == 0) {
-            $('#id_' + targetTimes[i].id).css('background-color', 'green');
+        if (hours === 0 ) {
+            $('#id_' + targetTimes[i].id).css('background-color', 'rgb(130, 162, 248)');
+            $('#id_' + targetTimes[i].id).css('color', 'rgb(39, 57, 249)');
         } else if (hours < 0) {
-            $('#id_' + targetTimes[i].id).css('background-color', 'red');
+            $('#id_' + targetTimes[i].id).css('background-color', 'rgb(251, 244, 207)');
+            $('#id_' + targetTimes[i].id).css('color', 'rgb(39, 57, 249)');
         } else {
-            $('#id_' + targetTimes[i].id).css('background-color', 'orange');
+            $('#id_' + targetTimes[i].id).css('background-color', 'rgb(39, 57, 249)');
+            $('#id_' + targetTimes[i].id).css('color', 'rgb(251, 244, 207)');
         }
     }
 }
@@ -103,8 +106,6 @@ function handleFormSubmit(event) {
     var selectedTimeSlot = form.find('span.input-group-text').attr('id').split('_')[1];
     
     localStorage.setItem('projectInput_' + selectedTimeSlot, inputValue);
-    
-    form.find('.projectItem').text(inputValue);
 }
 
 function setInputFromLocalStorage() {
@@ -112,7 +113,6 @@ function setInputFromLocalStorage() {
         const savedInput = localStorage.getItem('projectInput_' + targetTimes[i].id);
         if (savedInput) {
             $('#id_' + targetTimes[i].id).closest('.form').find('input[name=project-input]').val(savedInput);
-            $('#id_' + targetTimes[i].id).closest('.form').find('.projectItem').text(savedInput);
         }
     }
 }

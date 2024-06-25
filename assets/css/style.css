@@ -1,0 +1,26 @@
+*{
+    background-color: rgb(252, 252, 252);
+}
+h1{
+    color: rgb(41, 41, 87);
+}
+h2{
+    color: rgb(41, 41, 87);
+}
+.form{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgb(98, 107, 209);
+    border-radius: 5px;
+}
+.form .input-group .btn{
+    background-color: rgb(243, 98, 98);
+}
+
+.form .input-group .form-floating .form-control{
+    border: 0px solid white;
+}
+i {
+    background-color: rgb(243, 98, 98);
+}
