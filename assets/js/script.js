@@ -1,5 +1,5 @@
 var forms = $('.form'); 
-var button = $('.btn.btn-primary'); 
+var button = $('.btn'); 
 var projectInput = $('input[name=project-input]'); 
 var projectItems = $('.projectItem'); 
 
@@ -87,11 +87,14 @@ function checkTime(currentTime) {
         var hours = targetTimes[i].dayJs.diff(currentTime, 'hour');
         $('#id_' + targetTimes[i].id).text(targetTimes[i].realTime);
         if (hours == 0) {
-            $('#id_' + targetTimes[i].id).css('background-color', 'green');
+            $('#id_' + targetTimes[i].id).css('background-color', 'rgb(130, 162, 248)');
+            $('#id_' + targetTimes[i].id).css('color', 'rgb(39, 57, 249)');
         } else if (hours < 0) {
-            $('#id_' + targetTimes[i].id).css('background-color', 'red');
+            $('#id_' + targetTimes[i].id).css('background-color', 'rgb(251, 244, 207)');
+            $('#id_' + targetTimes[i].id).css('color', 'rgb(39, 57, 249)');
         } else {
-            $('#id_' + targetTimes[i].id).css('background-color', 'orange');
+            $('#id_' + targetTimes[i].id).css('background-color', 'rgb(39, 57, 249)');
+            $('#id_' + targetTimes[i].id).css('color', 'rgb(251, 244, 207)');
         }
     }
 }
