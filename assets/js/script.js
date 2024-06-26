@@ -1,7 +1,7 @@
 var forms = $('.form'); 
 var button = $('.btn'); 
-var projectInput = $('input[name=project-input]'); 
-var projectItems = $('.projectItem'); 
+var projectInput = $('input[name=task-input]'); 
+var projectItems = $('.taskItem'); 
 
 var targetTimes = [ 
     {
@@ -102,17 +102,17 @@ function checkTime(currentTime) {
 function handleFormSubmit(event) {
     event.preventDefault();
     var form = $(event.target);
-    var inputValue = form.find('input[name=project-input]').val();
+    var inputValue = form.find('input[name=task-input]').val();
     var selectedTimeSlot = form.find('span.input-group-text').attr('id').split('_')[1];
     
-    localStorage.setItem('projectInput_' + selectedTimeSlot, inputValue);
+    localStorage.setItem('taskInput_' + selectedTimeSlot, inputValue);
 }
 
 function setInputFromLocalStorage() {
     for (var i = 0; i < targetTimes.length; i++) {
-        const savedInput = localStorage.getItem('projectInput_' + targetTimes[i].id);
+        const savedInput = localStorage.getItem('taskInput_' + targetTimes[i].id);
         if (savedInput) {
-            $('#id_' + targetTimes[i].id).closest('.form').find('input[name=project-input]').val(savedInput);
+            $('#id_' + targetTimes[i].id).closest('.form').find('input[name=task-input]').val(savedInput);
         }
     }
 }

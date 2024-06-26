@@ -100,7 +100,7 @@ In order to use this application:
 
     * Adding a delete button to remove a saved task or a clear button to clear all tasks for scheduling another day.
 
-# ScreenShots
+# ScreenShot
 ![Project Screenshot](./images/planner.png)
 
 # Demo
