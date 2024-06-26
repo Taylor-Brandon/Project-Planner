@@ -26,7 +26,14 @@
 
 # Introduction 
 
+This website demonstrates the ability to utilize Third Party Apis in order to provide a outlet to schedule a typical workday
+
+- Users have the accesibility to structure their day, increase productivity, complete their goals, and achieve an overall sense of a accomplishment 
+
+- This website is intended for individuals who lack a daily schedule, those who enjoy planning their workday in order to optimize efficiency, and fellow organizers.
+
 # Key-Features
+
 
 # Installation
 
