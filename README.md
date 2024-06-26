@@ -105,7 +105,7 @@ In order to use this application:
 
 # Demo
 
-- Will Add after next commit
+You can explore the live demo of this project by clicking the following link: [Live Demo](https://taylor-brandon.github.io/Project-Planner/)
 
 # Acknowledgements
 
